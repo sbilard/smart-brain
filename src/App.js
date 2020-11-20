@@ -89,7 +89,7 @@ class App extends Component {
 // on click the url becomes the new state and is sent thru predict
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input})
-    fetch('http://localhost:3000/imageurl', {
+    fetch('https://secure-atoll-01687.herokuapp.com/imageurl', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -102,7 +102,7 @@ class App extends Component {
     //   this.state.input)
     .then(response => {
       if (response) {
-        fetch('http://localhost:3000/image', {
+        fetch('https://secure-atoll-01687.herokuapp.com/image', {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
